@@ -10,7 +10,10 @@ void setup() {
 draw = function(){
  
   background(255,255,255,0);
-  
+
+ 
+
+  ellipse(300,200,100,140);
 
 
 
