@@ -13,7 +13,20 @@ draw = function(){
 
  
 
-  ellipse(300,200,100,140);
+
+fill(137,207,240)
+  ellipse(265,350,60,100); //left leg
+  ellipse(335,350,60,100); //right leg
+
+
+  fill(255,0,0)
+  ellipse (240,385,100,40); //left foot
+ellipse (360,385,100,40); //right foot
+
+
+
+fill (255,255,0)
+  ellipse(300,275,100,175); //clown body
 
 
 
