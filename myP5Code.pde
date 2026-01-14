@@ -24,14 +24,32 @@ fill(137,207,240)
 ellipse (360,385,100,40); //right foot
 
 
+ellipse(250,225,100,40); //left arm
+ellipse(350,225,100,40); //right arm
+
+fill(255,255,255)
+ellipse(210,225,40,40); //left hand
+ellipse(395,225,40,40); //right hand
 
 fill (255,255,0)
   ellipse(300,275,100,175); //clown body
 
+fill(255,255,255)
+ellipse(300,150,150,150); //head
 
+fill(255,0,0)
+ellipse(300,175,50,50); //Nose
 
+fill(0,0,0)
+ellipse(265,125,35,35)
 
+fill(255,255,0)
+ellipse(265,125,25,25)
 
+fill(255,0,255)
+ellipse(210,200,20,20); //purple ball
+fill(255,105,180)
+ellipse(395,200,20,20); //pink ball
 
   if(mousePressed){showXYPositions();}
 
