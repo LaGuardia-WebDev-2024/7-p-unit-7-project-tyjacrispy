@@ -5,6 +5,11 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 
+var Nose = 50
+
+var BallUp = 200
+
+var BallDown = 200
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -37,21 +42,50 @@ fill (255,255,0)
 fill(255,255,255)
 ellipse(300,150,150,150); //head
 
-fill(255,0,0)
-ellipse(300,175,50,50); //Nose
+
 
 fill(0,0,0)
-ellipse(265,125,35,35)
+ellipse(265,125,35,35); //left eye black
+ellipse(335,125,35,35); //right eye black
+
 
 fill(255,255,0)
-ellipse(265,125,25,25)
+ellipse(265,125,25,25); //left eye yellow
+ellipse(335,125,25,25); //right eye yellow
 
 fill(255,0,255)
-ellipse(210,200,20,20); //purple ball
+ellipse(210,BallUp,20,20); //purple ball
 fill(255,105,180)
-ellipse(395,200,20,20); //pink ball
+ellipse(395,BallDown,20,20); //pink ball
 
-  if(mousePressed){showXYPositions();}
+fill(255,0,0)
+ellipse(300,175,Nose,Nose); //Nose
+
+
+
+
+  if(mousePressed){showXYPositions();
+  Nose = Nose+2
+  }
+
+  if(keyPressed){
+      if(key == 't' || key == 'T'){
+      BallDown += 2;
+      }
+      if(key == 't' || key == 'T'){
+      BallUp -= 2;
+      }
+  }
+
+
+ if(keyPressed){
+      if(key == 'f' || key == 'F'){
+      BallDown -= 2;
+      }
+      if(key == 'f' || key == 'F'){
+      BallUp += 2;
+      }
+  }
 
 }
 
@@ -67,4 +101,22 @@ showXYPositions = function(){
     fill(255, 255, 255)
     ellipse(mouseX, mouseY, 10, 10);
     fill(255,255,255)
+}
+
+void keyPressed(){
+  if(key == 'c' || key == 'C'){
+   BallDown += 2;
+  }
+
+  if(key == 'r' || key == 'R'){
+    fillR = random(100,255);
+    fillG = 0;
+    fillB = 0;
+  }
+
+  if(key == 'g' || key == 'G'){
+    fillR = 0;
+    fillG = random(100,255);
+    fillB = 0;
+  }
 }
