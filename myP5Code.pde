@@ -42,7 +42,8 @@ fill (255,255,0)
 fill(255,255,255)
 ellipse(300,150,150,150); //head
 
-
+fill(0,0,0)
+line(280,210,320,210)
 
 fill(0,0,0)
 ellipse(265,125,35,35); //left eye black
